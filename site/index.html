@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvest Harness</title>
+<meta name="description" content="Aidan's Claude Code harness: a method for turning sessions that worked into skills, plus the agents, hooks and skills it produced.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+:root{--bg:#f4f1ea;--ink:#1b1a17;--mute:#6b665c;--line:#d9d3c5;--card:#fbf9f4;--acc:#b5471d;--ok:#2f6b3a;--warn:#a5481d;--code:#ece7dc}
+@media (prefers-color-scheme:dark){:root{--bg:#141310;--ink:#ece7dc;--mute:#9a9486;--line:#2e2b25;--card:#1c1a16;--acc:#e0774a;--ok:#7fbf8a;--warn:#e0905a;--code:#24211c}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font:17px/1.5 Newsreader,Georgia,serif;-webkit-text-size-adjust:100%}
+.mono,code,pre,button,.btn,textarea,select{font-family:"IBM Plex Mono",ui-monospace,monospace}
+main{max-width:720px;margin:0 auto;padding:0 16px}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.kick{font:600 12px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--acc);margin:0 0 14px}
+h1{font-weight:600;font-size:34px;line-height:1.12;margin:0 0 16px;letter-spacing:-.01em}
+h2{font-weight:600;font-size:25px;line-height:1.2;margin:0 0 10px}
+p{margin:0 0 14px}
+.sub{color:var(--mute);font-size:18px}
+.cmd{display:flex;align-items:stretch;border:1px solid var(--line);background:var(--code);border-radius:6px;margin:18px 0 10px;overflow:hidden}
+.cmd code{flex:1;padding:12px;font-size:13px;overflow-x:auto;white-space:nowrap}
+.cmd button{border:0;border-left:1px solid var(--line);background:transparent;color:var(--ink);padding:0 14px;font-size:13px;cursor:pointer;min-height:44px}
+.btn{display:block;text-align:center;background:var(--ink);color:var(--bg);text-decoration:none;font-size:15px;font-weight:600;padding:14px 16px;border-radius:6px;min-height:48px}
+.btn:hover{opacity:.9}
+.small{font-size:14px;color:var(--mute)}
+.loop{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 12px}
+.loop button{flex:1 1 auto;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 12px;font-size:13px;cursor:pointer;min-height:40px}
+.loop button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.step{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;min-height:150px}
+.step .who{font:600 12px "IBM Plex Mono",monospace;color:var(--acc);text-transform:uppercase;letter-spacing:.06em}
+.step .art{font:13px "IBM Plex Mono",monospace;color:var(--mute);margin-top:10px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 10px}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:4px;padding:8px 10px;font-size:13px;cursor:pointer;min-height:40px}
+.tabs button[aria-pressed=true]{border-color:var(--acc);color:var(--acc)}
+textarea{width:100%;height:220px;font-size:16px;line-height:1.4;background:var(--code);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:10px;resize:vertical}
+.verdict{font:600 15px "IBM Plex Mono",monospace;margin:16px 0 8px}
+.checks{list-style:none;margin:0;padding:0}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.checks .m{font-family:"IBM Plex Mono",monospace;font-weight:600}
+.checks .y{color:var(--ok)}.checks .n{color:var(--warn)}
+.checks small{display:block;color:var(--mute);font-size:13px;font-family:"IBM Plex Mono",monospace;word-break:break-word}
+.tiers{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
+@media (min-width:700px){.tiers{grid-template-columns:1fr 1fr}h1{font-size:44px}main{padding:0 24px}}
+.tier{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:18px}
+.tier h3{margin:0 0 4px;font-size:20px}
+.tier .price{font:600 26px "IBM Plex Mono",monospace;margin:4px 0 12px}
+.tier ul{margin:0 0 16px;padding-left:18px;font-size:15px}
+.tier li{margin:3px 0}
+details{border-top:1px solid var(--line);padding:10px 0}
+details summary{cursor:pointer;font-weight:600;list-style:none;min-height:28px}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"+ ";font-family:"IBM Plex Mono",monospace;color:var(--acc)}
+details[open] summary::before{content:"– "}
+details div{font-size:15px;color:var(--ink);white-space:pre-wrap;margin-top:8px}
+blockquote{margin:0;padding:0 0 0 14px;border-left:3px solid var(--acc)}
+footer{padding:28px 0 48px;font-size:14px;color:var(--mute)}
+footer a,a{color:var(--acc)}
+</style>
+</head>
+<body>
+<main>
+
+<section>
+  <p class="kick">A Claude Code harness</p>
+  <h1>Getting an AI to do a given thing is really pretty simple.</h1>
+  <p class="sub">This is the harness I run Claude Code with. A method, two agents, three hooks and twelve skills. Every skill was harvested from a session that worked. None were written up front.</p>
+  <div class="cmd"><code id="installCmd">curl -fsSL https://harvest-harness.vercel.app/install.sh | sh</code><button type="button" data-copy="installCmd">Copy</button></div>
+  <p class="small">Free: the method and four skills, into <code>~/.claude/skills</code>. Nothing you have gets overwritten.</p>
+  <a class="btn" id="buyTop" href="#buy">The whole bench, $49 once</a>
+</section>
+
+<section>
+  <p class="kick">The loop</p>
+  <h2>The skills aren't the asset. The loop that makes them is.</h2>
+  <div class="loop" role="group" aria-label="Loop steps" id="loop"></div>
+  <div class="step" id="step" aria-live="polite"></div>
+</section>
+
+<section>
+  <p class="kick">Check a skill</p>
+  <h2>Here's a real one. Paste yours and see what it's missing.</h2>
+  <div class="tabs" id="tabs"></div>
+  <label for="skill" class="small">SKILL.md</label>
+  <textarea id="skill" spellcheck="false"></textarea>
+  <div class="verdict" id="verdict"></div>
+  <ul class="checks" id="checks"></ul>
+  <p class="small" style="margin-top:14px">No skill yet? Install the free slice, do a real piece of work, then type <code>/crystallize</code>. It writes your first skill from the session you just had, on your machine.</p>
+</section>
+
+<section id="buy">
+  <p class="kick">Free, or the whole bench</p>
+  <h2>Take the method for free. Pay for the bench.</h2>
+  <div class="tiers">
+    <div class="tier">
+      <h3>The method</h3>
+      <div class="price">$0</div>
+      <ul>
+        <li>The thesis and the operating tenets, verbatim</li>
+        <li><code>crystallize</code>: turns a session into a skill</li>
+        <li><code>github-scout</code>: check GitHub before you build</li>
+        <li><code>mobile-ui-audit</code>: what a phone visitor fails on</li>
+        <li><code>tool-skill-template</code>: one skill per tool that bites</li>
+      </ul>
+      <a class="btn" href="https://github.com/2016judea/harvest-harness/tree/main/free" style="background:transparent;color:var(--ink);border:1px solid var(--ink)">Read it on GitHub</a>
+    </div>
+    <div class="tier">
+      <h3>The bench</h3>
+      <div class="price">$49</div>
+      <ul>
+        <li>Everything in the method</li>
+        <li><code>CLAUDE.md</code> with all 14 tenets, ready to load</li>
+        <li><code>eng-lead</code> and <code>product-lead</code> agents, with memory seeds</li>
+        <li>3 hooks and the <code>settings.json</code> block that wires them</li>
+        <li>8 more skills: <code>claude-usage-mining</code>, <code>build-remote-mcp-server</code>, <code>vercel-api</code>, <code>reddit-mining</code>, <code>beautify</code>, <code>mac-menu-bar-app</code>, <code>reframe</code>, <code>think-big</code></li>
+        <li>One install script. Zip, yours to keep.</li>
+      </ul>
+      <a class="btn" id="buy49" href="#">Buy the bench, $49</a>
+      <p class="small" style="margin:10px 0 0">One time. You download it the moment you pay.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="kick">The tenets</p>
+  <h2>What I actually work by, and why each one is a rule.</h2>
+  <div id="tenets" class="small">Loading…</div>
+</section>
+
+<footer>Aidan · <a href="https://github.com/2016judea/harvest-harness">Source</a> · Not affiliated with Anthropic.</footer>
+</main>
+
+<script>
+const PAY = "https://buy.stripe.com/cNi6oG1OK8Gdacmdwd0Jq3J";
+for (const id of ["buy49"]) document.getElementById(id).href = PAY;
+
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied"; }
+  catch { b.textContent = "Select it"; }
+  setTimeout(() => b.textContent = "Copy", 1600);
+  window.va && va("event", {name: "copy_install"});
+}));
+document.getElementById("buy49").addEventListener("click", () => window.va && va("event", {name: "buy_click"}));
+
+// ---- the loop (from CLAUDE.md, "The loop")
+const LOOP = [
+  ["orient", "Claude", "Load the method and whatever skills match the task. A fresh session reads them and starts where the last one stopped.", "CLAUDE.md, skills/*/SKILL.md"],
+  ["work it", "Claude", "Work a genuinely novel problem. The wrong turn it takes first is the most valuable thing in the session.", "the transcript"],
+  ["verify", "you", "You run it in the world: the page is live, the trade executed, the pipeline ran on real data. A skill from an unverified run bakes in the bug.", "something real"],
+  ["journal", "Claude", "What happened and why, dated. The journal is evidence, not instruction.", "a dated journal entry"],
+  ["skill", "Claude", "Rules with their why, trigger phrases you'd actually type, back-references to where each claim came from. Next time is one-shot.", "skills/<name>/SKILL.md, with a grounded: line"],
+];
+const loopEl = document.getElementById("loop"), stepEl = document.getElementById("step");
+function showStep(i){
+  [...loopEl.children].forEach((b,j)=>b.setAttribute("aria-pressed", j===i));
+  const [n, who, txt, art] = LOOP[i];
+  stepEl.innerHTML = `<div class="who">${i+1} · ${n} · ${who}</div><p style="margin:8px 0 0">${txt}</p><div class="art">leaves: ${art.replace(/</g,"&lt;")}</div>`;
+}
+LOOP.forEach((s,i)=>{const b=document.createElement("button");b.type="button";b.textContent=`${i+1} ${s[0]}`;b.onclick=()=>showStep(i);loopEl.appendChild(b);});
+showStep(0);
+
+// ---- the checker
+const EXAMPLES = ["crystallize","github-scout","mobile-ui-audit","tool-skill-template"];
+const ta = document.getElementById("skill"), tabs = document.getElementById("tabs");
+async function loadExample(name){
+  [...tabs.children].forEach(b=>b.setAttribute("aria-pressed", b.dataset.n===name));
+  const r = await fetch(`/free/skills/${name}/SKILL.md`); ta.value = await r.text(); check();
+}
+EXAMPLES.forEach(n=>{const b=document.createElement("button");b.type="button";b.dataset.n=n;b.textContent=n;b.onclick=()=>loadExample(n);tabs.appendChild(b);});
+const yours=document.createElement("button");yours.type="button";yours.dataset.n="yours";yours.textContent="paste yours";
+yours.onclick=()=>{[...tabs.children].forEach(b=>b.setAttribute("aria-pressed",b===yours));ta.value="";ta.focus();check();};tabs.appendChild(yours);
+
+function front(t){const m=t.match(/^---\n([\s\S]*?)\n---/);if(!m)return null;const o={};let k=null;
+  for(const l of m[1].split("\n")){const kv=l.match(/^([\w-]+):\s*(.*)$/);if(kv){k=kv[1];o[k]=kv[2].replace(/^>-?\s*$/,"");}else if(k)o[k]+=" "+l.trim();}return o;}
+function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
+function check(){
+  const t = ta.value, out = [];
+  if(!t.trim()){document.getElementById("verdict").textContent="Paste a SKILL.md above.";document.getElementById("checks").innerHTML="";return;}
+  const f = front(t) || {};
+  const body = t.replace(/^---\n[\s\S]*?\n---/,"");
+  const desc = f.description || "";
+  const triggers = (desc.match(/["“][^"”]{3,60}["”]/g)||[]).length;
+  out.push([!!f.name && desc.length>40, "Has a name and a real description", f.name?`name: ${f.name}`:"no name: in frontmatter", "Add frontmatter: name and description. The description is the whole discovery mechanism."]);
+  out.push([triggers>=3, "Description carries the words you'd type", `${triggers} quoted trigger phrase${triggers===1?"":"s"}`, "Put 3+ phrases you'd actually type into the description, in quotes."]);
+  const g = f.grounded||"";
+  out.push([/20\d\d-\d\d-\d\d/.test(g) && g.length>20, "Grounded in a dated, real session", g?g.slice(0,90):"no grounded: line", "Add grounded: <date> — <the real session it came from>. Without it a dead skill looks fresh."]);
+  // a rule = a bullet or numbered item (with its continuation lines) that says never/always/must/don't
+  const items = body.split(/\n(?=\s*(?:-|\d+\.)\s)|\n\s*\n/);
+  const rules = items.filter(l=>/^\s*(-|\d+\.)\s/.test(l) && /\b(never|always|must|do not|don't)\b/i.test(l));
+  const why = rules.filter(l=>/(because|why|otherwise|so that| — |;|cost|broke|bit |found|on 20\d\d|\bfail|instead|rather than|is worse|reason|, so )/i.test(l));
+  out.push([rules.length===0 || why.length/rules.length>=0.5, "Rules carry their why", `${why.length} of ${rules.length} rule lines give a reason`, "A rule without its why gets rationalised around. Add the incident that made it a rule."]);
+  const back = (body.match(/\[\[[^\]]+\]\]|20\d\d-\d\d-\d\d|`[~.]?\/[\w./-]+`/g)||[]).length;
+  out.push([back>=2, "Back-references its assumptions", `${back} dates, paths or [[links]]`, "Name where each claim came from: a date, a file, a note."]);
+  const fwd = (body.match(/(see also|forward|→|owns|`[a-z]+(-[a-z]+)+`)/gi)||[]).length;
+  out.push([fwd>=1, "Forward-references what it doesn't own", `${fwd} pointers out`, "Point at the skill or tool that owns the out-of-scope part instead of restating it."]);
+  const words = t.split(/\s+/).filter(Boolean).length;
+  out.push([words<=3000, "Concise per line", `${words} words`, "Every line either narrows the space or gets cut."]);
+  const fails = out.filter(o=>!o[0]);
+  document.getElementById("verdict").textContent = fails.length ? `${out.length-fails.length}/${out.length} — the one fix: ${fails[0][3]}` : `${out.length}/${out.length} — ready. It should one-shot.`;
+  document.getElementById("checks").innerHTML = out.map(([ok,l,d])=>`<li><span class="m ${ok?"y":"n"}">${ok?"✓":"✗"}</span><span>${esc(l)}<small>${esc(d)}</small></span></li>`).join("");
+}
+let tmr; ta.addEventListener("input",()=>{clearTimeout(tmr);tmr=setTimeout(check,200);});
+loadExample("crystallize");
+
+// ---- tenets, verbatim from the free METHOD.md
+fetch("/free/METHOD.md").then(r=>r.text()).then(md=>{
+  const sec = md.split("## Operating tenets")[1].split("## The loop")[0];
+  const items = sec.split(/\n(?=\d+\. \*\*)/).filter(s=>/^\d+\. \*\*/.test(s));
+  document.getElementById("tenets").innerHTML = items.map(s=>{
+    const m = s.match(/^(\d+)\. \*\*(.+?)\*\*([\s\S]*)$/);
+    const txt = m[3].replace(/\n\s+/g," ").replace(/\*\*/g,"").replace(/\*/g,"").replace(/`/g,"").trim();
+    return `<details><summary>${m[1]}. ${esc(m[2])}</summary><div>${esc(txt)}</div></details>`;
+  }).join("");
+});
+</script>
+</body>
+</html>

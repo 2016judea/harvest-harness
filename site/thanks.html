@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harvest Harness</title>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+:root{--bg:#f4f1ea;--ink:#1b1a17;--mute:#6b665c;--line:#d9d3c5;--code:#ece7dc;--acc:#b5471d}
+@media (prefers-color-scheme:dark){:root{--bg:#141310;--ink:#ece7dc;--mute:#9a9486;--line:#2e2b25;--code:#24211c;--acc:#e0774a}}
+html,body{margin:0;background:var(--bg);color:var(--ink)}body{font:17px/1.5 Georgia,serif}
+main{max-width:620px;margin:0 auto;padding:48px 16px}
+h1{font-size:30px;line-height:1.15;margin:0 0 14px}p{margin:0 0 14px}.m{color:var(--mute);font-size:15px}
+.btn{display:block;text-align:center;background:var(--ink);color:var(--bg);text-decoration:none;font:600 15px ui-monospace,monospace;padding:14px;border-radius:6px;margin:20px 0}
+pre{background:var(--code);border:1px solid var(--line);border-radius:6px;padding:12px;font-size:13px;overflow-x:auto}a{color:var(--acc)}
+</style></head><body><main>
+<h1>Paid. Here's the bench.</h1>
+<p>Your download is below. Keep this page's link: it works again whenever you need the zip.</p>
+<a class="btn" id="dl" href="#">Download harness.zip</a>
+<pre>unzip harness.zip && sh harness/install.sh --wire-hooks</pre>
+<p class="m">Then do real work in Claude Code and type <code>/crystallize</code> at the end. Anything already in <code>~/.claude</code> is moved to a backup folder first, never overwritten.</p>
+<p class="m"><a href="/">Back</a></p>
+</main><script>
+const s=new URLSearchParams(location.search).get("session_id")||"";
+const a=document.getElementById("dl");
+if(!s){a.textContent="No purchase found on this link";a.removeAttribute("href");}
+else{a.href="/api/download?session_id="+encodeURIComponent(s);a.onclick=()=>window.va&&va("event",{name:"download"});}
+</script></body></html>

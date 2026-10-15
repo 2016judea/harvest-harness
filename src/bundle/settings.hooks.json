@@ -1,0 +1,16 @@
+{
+  "_README": "Merge the 'hooks' block into ~/.claude/settings.json (install.sh does it if you pass --wire-hooks). cleanupPeriodDays keeps transcripts past the 30-day default, so crystallize and claude-usage-mining have history to read.",
+  "cleanupPeriodDays": 36500,
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "python3 ~/.claude/hooks/pending.py 2>/dev/null || true", "timeout": 10}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "python3 ~/.claude/hooks/skill_on_keyword.py 2>/dev/null || true", "timeout": 10}]}
+    ],
+    "PreToolUse": [
+      {"matcher": "mcp__zoho-mail__ZohoMail_send.*",
+       "hooks": [{"type": "command", "command": "python3 ~/.claude/hooks/send_cap.py", "timeout": 10}]}
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+private/
+build/
+.vercel/
+__pycache__/
+.env
