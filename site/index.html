@@ -38,13 +38,14 @@ p{margin:0 0 14px}
 .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0 10px}
 .tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:4px;padding:8px 10px;font-size:13px;cursor:pointer;min-height:40px}
 .tabs button[aria-pressed=true]{border-color:var(--acc);color:var(--acc)}
-textarea{width:100%;height:220px;font-size:16px;line-height:1.4;background:var(--code);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:10px;resize:vertical}
-.verdict{font:600 15px "IBM Plex Mono",monospace;margin:16px 0 8px}
-.checks{list-style:none;margin:0;padding:0}
-.checks li{display:grid;grid-template-columns:22px 1fr;gap:6px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
-.checks .m{font-family:"IBM Plex Mono",monospace;font-weight:600}
-.checks .y{color:var(--ok)}.checks .n{color:var(--warn)}
-.checks small{display:block;color:var(--mute);font-size:13px;font-family:"IBM Plex Mono",monospace;word-break:break-word}
+.show{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px}
+.show .one{font-size:19px;margin:0 0 14px}
+.show .lbl{font:600 12px "IBM Plex Mono",monospace;color:var(--acc);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 6px}
+.show .say{display:flex;flex-wrap:wrap;gap:6px}
+.show .say span{font:13px "IBM Plex Mono",monospace;background:var(--code);border-radius:4px;padding:5px 8px}
+.show ol{margin:0;padding-left:20px;font-size:15px}.show ol li{margin:5px 0}
+.show .art{font:13px "IBM Plex Mono",monospace;color:var(--mute);word-break:break-word}
+#src pre{font-size:12px;line-height:1.45;background:var(--code);border-radius:6px;padding:12px;max-height:420px;overflow:auto;white-space:pre-wrap;word-break:break-word;margin:8px 0 0}
 .tiers{display:grid;grid-template-columns:1fr;gap:14px;margin-top:16px}
 @media (min-width:700px){.tiers{grid-template-columns:1fr 1fr}h1{font-size:44px}main{padding:0 24px}}
 .tier{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:18px}
@@ -83,14 +84,12 @@ footer a,a{color:var(--acc)}
 </section>
 
 <section>
-  <p class="kick">Check a skill</p>
-  <h2>Here's a real one. Paste yours and see what it's missing.</h2>
+  <p class="kick">The free skills</p>
+  <h2>Four skills, free. Here's what each one does.</h2>
   <div class="tabs" id="tabs"></div>
-  <label for="skill" class="small">SKILL.md</label>
-  <textarea id="skill" spellcheck="false"></textarea>
-  <div class="verdict" id="verdict"></div>
-  <ul class="checks" id="checks"></ul>
-  <p class="small" style="margin-top:14px">No skill yet? Install the free slice, do a real piece of work, then type <code>/crystallize</code>. It writes your first skill from the session you just had, on your machine.</p>
+  <div class="show" id="show" aria-live="polite"></div>
+  <details id="src"><summary>Read the SKILL.md</summary><pre id="srcText">Loading…</pre></details>
+  <p class="small" style="margin-top:14px">Install the free slice, do a real piece of work, then type <code>/crystallize</code>. It writes your first skill from the session you just had, on your machine.</p>
 </section>
 
 <section id="buy">
@@ -164,48 +163,70 @@ function showStep(i){
 LOOP.forEach((s,i)=>{const b=document.createElement("button");b.type="button";b.textContent=`${i+1} ${s[0]}`;b.onclick=()=>showStep(i);loopEl.appendChild(b);});
 showStep(0);
 
-// ---- the checker
-const EXAMPLES = ["crystallize","github-scout","mobile-ui-audit","tool-skill-template"];
-const ta = document.getElementById("skill"), tabs = document.getElementById("tabs");
-async function loadExample(name){
-  [...tabs.children].forEach(b=>b.setAttribute("aria-pressed", b.dataset.n===name));
-  const r = await fetch(`/free/skills/${name}/SKILL.md`); ta.value = await r.text(); check();
-}
-EXAMPLES.forEach(n=>{const b=document.createElement("button");b.type="button";b.dataset.n=n;b.textContent=n;b.onclick=()=>loadExample(n);tabs.appendChild(b);});
-const yours=document.createElement("button");yours.type="button";yours.dataset.n="yours";yours.textContent="paste yours";
-yours.onclick=()=>{[...tabs.children].forEach(b=>b.setAttribute("aria-pressed",b===yours));ta.value="";ta.focus();check();};tabs.appendChild(yours);
-
-function front(t){const m=t.match(/^---\n([\s\S]*?)\n---/);if(!m)return null;const o={};let k=null;
-  for(const l of m[1].split("\n")){const kv=l.match(/^([\w-]+):\s*(.*)$/);if(kv){k=kv[1];o[k]=kv[2].replace(/^>-?\s*$/,"");}else if(k)o[k]+=" "+l.trim();}return o;}
+// ---- the free skills, each summarised from its own SKILL.md in /free/skills
+const SKILLS = {
+  "crystallize": {
+    one: "Turns a session that worked into a skill, so next time is one-shot.",
+    say: ["/crystallize", "journal this", "make a skill for this", "we'll be doing this again"],
+    how: [
+      "Checks the work was verified in the world first. If it wasn't, it stops.",
+      "Rebuilds what really happened, starting with the wrong turn, because that's what the next session would repeat.",
+      "Writes a dated journal entry: the evidence.",
+      "Updates an existing skill if one covers it; writes a new one only if the shape recurs.",
+      "Splits tool quirks into their own tool skill. Also retires skills whose work is dead."
+    ],
+    leaves: "a journal entry + skills/<name>/SKILL.md with a grounded: line"
+  },
+  "github-scout": {
+    one: "Checks GitHub for the need before you build or pick a tool.",
+    say: ["is there a tool for X", "before we build this", "is this already solved", "what's trending on GitHub"],
+    how: [
+      "Searches 2–4 plain-words phrasings of the need, by stars and by recent activity.",
+      "Judges each repo on facts it reads: alive, licence, real fit, weight.",
+      "Answers with the decision first: use X, fork X, or build it and why.",
+      "Optionally scrapes GitHub trending weekly into a digest and names the 1–3 repos that touch your work."
+    ],
+    leaves: "a one-line call, plus ~/.claude/github-trending/<date>.md"
+  },
+  "mobile-ui-audit": {
+    one: "Finds what a phone visitor fails on, on real phone engines, across every site at once.",
+    say: ["the mobile site is broken", "scroll is broken on my phone", "QA this on a phone", "run the UI audit"],
+    how: [
+      "Loads each page in WebKit and Chromium phone profiles.",
+      "Measures what emulators hide: inputs under 16px that make iOS zoom, sideways overflow, locked scroll, tiny tap targets.",
+      "Ranks every finding FAIL / WARN / INFO and says why it's that severity.",
+      "Gives the fix by stack, and exits 1 on any FAIL so it can gate a deploy."
+    ],
+    leaves: "a findings table, JSON and screenshots"
+  },
+  "tool-skill-template": {
+    one: "A blank skill for the one API or CLI your agent keeps fighting.",
+    say: ["make a skill for <tool>", "the <API> keeps breaking", "write down how <service> works"],
+    how: [
+      "Copy the folder to ~/.claude/skills/<tool>/ and rename it.",
+      "Fill it from a session where the tool actually bit you: credentials, the calls that work, limits.",
+      "Spend the most care on \u201cthe fields that lie\u201d: what it says, what's true, the date, the tell.",
+      "Task skills then point here instead of restating the tool."
+    ],
+    leaves: "skills/<tool>/SKILL.md"
+  }
+};
+const tabs = document.getElementById("tabs"), show = document.getElementById("show"), srcText = document.getElementById("srcText");
 function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));}
-function check(){
-  const t = ta.value, out = [];
-  if(!t.trim()){document.getElementById("verdict").textContent="Paste a SKILL.md above.";document.getElementById("checks").innerHTML="";return;}
-  const f = front(t) || {};
-  const body = t.replace(/^---\n[\s\S]*?\n---/,"");
-  const desc = f.description || "";
-  const triggers = (desc.match(/["“][^"”]{3,60}["”]/g)||[]).length;
-  out.push([!!f.name && desc.length>40, "Has a name and a real description", f.name?`name: ${f.name}`:"no name: in frontmatter", "Add frontmatter: name and description. The description is the whole discovery mechanism."]);
-  out.push([triggers>=3, "Description carries the words you'd type", `${triggers} quoted trigger phrase${triggers===1?"":"s"}`, "Put 3+ phrases you'd actually type into the description, in quotes."]);
-  const g = f.grounded||"";
-  out.push([/20\d\d-\d\d-\d\d/.test(g) && g.length>20, "Grounded in a dated, real session", g?g.slice(0,90):"no grounded: line", "Add grounded: <date> — <the real session it came from>. Without it a dead skill looks fresh."]);
-  // a rule = a bullet or numbered item (with its continuation lines) that says never/always/must/don't
-  const items = body.split(/\n(?=\s*(?:-|\d+\.)\s)|\n\s*\n/);
-  const rules = items.filter(l=>/^\s*(-|\d+\.)\s/.test(l) && /\b(never|always|must|do not|don't)\b/i.test(l));
-  const why = rules.filter(l=>/(because|why|otherwise|so that| — |;|cost|broke|bit |found|on 20\d\d|\bfail|instead|rather than|is worse|reason|, so )/i.test(l));
-  out.push([rules.length===0 || why.length/rules.length>=0.5, "Rules carry their why", `${why.length} of ${rules.length} rule lines give a reason`, "A rule without its why gets rationalised around. Add the incident that made it a rule."]);
-  const back = (body.match(/\[\[[^\]]+\]\]|20\d\d-\d\d-\d\d|`[~.]?\/[\w./-]+`/g)||[]).length;
-  out.push([back>=2, "Back-references its assumptions", `${back} dates, paths or [[links]]`, "Name where each claim came from: a date, a file, a note."]);
-  const fwd = (body.match(/(see also|forward|→|owns|`[a-z]+(-[a-z]+)+`)/gi)||[]).length;
-  out.push([fwd>=1, "Forward-references what it doesn't own", `${fwd} pointers out`, "Point at the skill or tool that owns the out-of-scope part instead of restating it."]);
-  const words = t.split(/\s+/).filter(Boolean).length;
-  out.push([words<=3000, "Concise per line", `${words} words`, "Every line either narrows the space or gets cut."]);
-  const fails = out.filter(o=>!o[0]);
-  document.getElementById("verdict").textContent = fails.length ? `${out.length-fails.length}/${out.length} — the one fix: ${fails[0][3]}` : `${out.length}/${out.length} — ready. It should one-shot.`;
-  document.getElementById("checks").innerHTML = out.map(([ok,l,d])=>`<li><span class="m ${ok?"y":"n"}">${ok?"✓":"✗"}</span><span>${esc(l)}<small>${esc(d)}</small></span></li>`).join("");
+async function pick(name){
+  [...tabs.children].forEach(b=>b.setAttribute("aria-pressed", b.dataset.n===name));
+  const k = SKILLS[name];
+  show.innerHTML = `<p class="one">${esc(k.one)}</p>
+    <div class="lbl">You say</div><div class="say">${k.say.map(x=>`<span>${esc(x)}</span>`).join("")}</div>
+    <div class="lbl">What it does</div><ol>${k.how.map(x=>`<li>${esc(x)}</li>`).join("")}</ol>
+    <div class="lbl">What it leaves</div><div class="art">${esc(k.leaves)}</div>`;
+  srcText.textContent = "Loading…";
+  try { srcText.textContent = await (await fetch(`/free/skills/${name}/SKILL.md`)).text(); }
+  catch { srcText.textContent = "Couldn't load it. It's on GitHub under free/skills."; }
+  window.va && va("event", {name: "skill_view", data: {skill: name}});
 }
-let tmr; ta.addEventListener("input",()=>{clearTimeout(tmr);tmr=setTimeout(check,200);});
-loadExample("crystallize");
+Object.keys(SKILLS).forEach(n=>{const b=document.createElement("button");b.type="button";b.dataset.n=n;b.textContent=n;b.onclick=()=>pick(n);tabs.appendChild(b);});
+pick("crystallize");
 
 // ---- tenets, verbatim from the free METHOD.md
 fetch("/free/METHOD.md").then(r=>r.text()).then(md=>{
