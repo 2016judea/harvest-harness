@@ -1,0 +1,15 @@
+Subject: "Agents as scaffolding for recurring tasks"
+
+Hi Will,
+
+In "Agents as scaffolding for recurring tasks" you set up an agent to handle webhooks, "including filtering incoming messages down to the highest priority issues." The recurring part is where skills pay off. My harness is built for that: when a task works once, /crystallize turns the session into a skill, so the second run is one-shot.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/c9078f65/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "Do not affirm my statements"
+
+Hi Elliot,
+
+Your dotfiles CLAUDE.md says "Do not affirm my statements or assume my conclusions are correct." Asking for reports in ASD-STE100 Simplified Technical English is a sharper fix for model prose than anything I have tried. My CLAUDE.md carries the same rule against sycophancy, with the reason attached so the model does not rationalize around it.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/e339ef24/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

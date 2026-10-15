@@ -1,0 +1,13 @@
+Subject: "follow explicit instructions in CLAUDE.md"
+
+Hi Charles,
+
+Your issue #97059 opens "I'm trying to debug a failure of Claude Opus 5.5 to follow explicit instructions in CLAUDE.md." Treating it as a bug to debug rather than a prompt to shout is the right instinct. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/82aa98b2/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

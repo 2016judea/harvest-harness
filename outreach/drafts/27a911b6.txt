@@ -1,0 +1,13 @@
+Subject: "it may not be relevant for you"
+
+Hi Tim,
+
+Your claude_config README says "Unless you are a scientist or Julia user, it may not be relevant for you." The no-plan-comments hook, catching planning scaffolding that leaks into code after every edit, is relevant to everyone. I run Claude Code on one bet: a skill only gets written after a session worked, and every rule in it carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/27a911b6/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

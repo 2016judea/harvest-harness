@@ -1,0 +1,13 @@
+Subject: "on the first attempt"
+
+Hi Jan,
+
+Your issue #94325 says "The user's explicit instruction should take precedence on the first attempt, and it does not." Needing a hook to block attribution is the tell. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/2b67aa6c/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

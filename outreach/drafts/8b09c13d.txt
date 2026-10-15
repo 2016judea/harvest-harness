@@ -1,0 +1,13 @@
+Subject: "Claude doesn't place orders"
+
+Hi Bruno,
+
+Your my_claude_skills README says "Claude doesn't place orders, submit forms, or send requests on its own." Leaving the checking to scripts wherever a mistake is costly is the right call for a lab. My harness writes the same gate as a rule with its reason: the agent builds freely and stops at money, outreach, or anything irreversible.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/8b09c13d/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

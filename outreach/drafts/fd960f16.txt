@@ -1,0 +1,13 @@
+Subject: "~10k tokens"
+
+Hi Brian,
+
+Your issue #77261 notes "Auto-memory can grow to a meaningful size (e.g. ~10k tokens)," and every subagent pays for it. Mine is 33KB and climbing, which is how I ended up splitting what goes where. In my harness memory holds facts, skills hold the how, and each agent gets a small seeded memory of its own.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/fd960f16/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

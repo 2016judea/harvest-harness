@@ -1,0 +1,13 @@
+Subject: "violated the same rule again"
+
+Hi Jeff,
+
+Your issue #77544 says Claude "acknowledged the rule, sometimes updated the memory file — and then violated the same rule again in the next relevant action." I have watched the same loop. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/64a89fae/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

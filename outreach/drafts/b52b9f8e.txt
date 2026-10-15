@@ -1,0 +1,15 @@
+Subject: "invoke subagents"
+
+Hi Max,
+
+Your agentic iteration post says "Another trick I found to encourage agents to think outside the box is to invoke subagents." Publishing your AGENTS.md alongside it was useful. I run Claude Code on one bet: a skill only gets written after a session worked, and every rule in it carries its why.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/b52b9f8e/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,15 @@
+Subject: "everything deterministic that wraps the model"
+
+Hi Subham,
+
+Your Harness Driven Engineering post defines the harness as "everything deterministic that wraps the model." Your hooks guide is the most practical part of that series. My harness has three hooks, each written after a real failure with the why in the file, and skills harvested from sessions that worked.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/7fab2ea7/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

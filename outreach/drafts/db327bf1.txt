@@ -1,0 +1,13 @@
+Subject: "Treat me as an expert. Skip the basics."
+
+Hi Paul,
+
+Your global CLAUDE.md in dot-claude opens with "Treat me as an expert. Skip the basics." Merging settings/*.jsonc through a Husky hook is more care than most people give ~/.claude. Mine is also ~/.claude as a repo, and the rule I lean on most is that a skill gets written only after a session worked.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/db327bf1/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "unless a decision is genuinely yours"
+
+Hi Yifan,
+
+Your /cpr skill promises one command from local changes to a merged PR, and "it never stops to ask between steps unless a decision is genuinely yours." Ranking your skills by actual injection count in the README is a good touch. I drew the same line in my own CLAUDE.md: the agent builds and ships, and stops only at money, contacting a person, or deleting something.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/83e30cd4/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,15 @@
+Subject: "our contexts have become cluttered"
+
+Hi Drew,
+
+Your Dr. Skill post says "as Skills have grown in popularity, our contexts have become cluttered." Auditing the loadout is half the fix. The other half in my harness sits upstream: a skill only exists if a session earned it, and it carries a dated grounded: line so retiring it is easy.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/41502b9d/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

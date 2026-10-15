@@ -1,0 +1,13 @@
+Subject: "missing at the moment they matter most"
+
+Hi Vova,
+
+Your issue #96361 says "a directory's conventions are missing at the moment they matter most: when Claude writes a new file into that directory." That one is subtle, and you pinned it exactly. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/cea279cf/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

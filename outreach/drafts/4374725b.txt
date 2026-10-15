@@ -1,0 +1,13 @@
+Subject: "instructions, notes and facts in free text"
+
+Hi Jean-Marc,
+
+Your issue #98625 says "CLAUDE.md and auto memory don't solve this well. They mix instructions, notes and facts in free text." Separating those three was the most useful change I made. In my harness CLAUDE.md is what always applies, skills are how to do a thing, and memory is only what happened.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/4374725b/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

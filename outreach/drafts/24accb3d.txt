@@ -1,0 +1,13 @@
+Subject: "silently stops honouring rules"
+
+Hi Nahuel,
+
+Your issue #96422 says "The model continues from a lossy summary and silently stops honouring rules that exist only in those files." I kept hitting the same thing. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/24accb3d/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

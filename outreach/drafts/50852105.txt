@@ -1,0 +1,13 @@
+Subject: "the operating system"
+
+Hi Andre,
+
+Your claude-config README calls the CLAUDE.md "the operating system. Default behavior, planning rules, agent strategy, output discipline." Nine routed subagents on top of it is more structure than most people ever give theirs. Mine runs the same way, with one rule over it: no skill gets written until a session has actually worked, and every rule carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/50852105/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

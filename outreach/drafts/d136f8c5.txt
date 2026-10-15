@@ -1,0 +1,15 @@
+Subject: "rooted in token scarcity"
+
+Hi Harper,
+
+Your "Why Don't My Agents Break Containment?" post says "Most of the defensive work we do building agentic systems is directly rooted in token scarcity." It reframes half the guardrails in my own CLAUDE.md. The other half are rules with their why attached, harvested from sessions where something actually went wrong.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/d136f8c5/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

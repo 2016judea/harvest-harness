@@ -1,0 +1,13 @@
+Subject: "propagate to every project and machine"
+
+Hi Ed,
+
+Your claude-code-config README promises "reusable agents, skills, hooks, and permission templates that propagate to every project and machine." Merging stacks into one deny-aware permission set is the part most setups skip. Mine is built the same way, global and versioned, plus one habit: skills get harvested from sessions that worked, never written up front.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/6eaa6b34/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

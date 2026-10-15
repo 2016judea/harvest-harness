@@ -1,0 +1,13 @@
+Subject: "can't be enforced from the project side"
+
+Hi Vlastimil,
+
+Your issue #90572 says "The instruction can't be enforced from the project side," about the worktree rule that got skipped. I keep a worktree rule too. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/5ecf55e1/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

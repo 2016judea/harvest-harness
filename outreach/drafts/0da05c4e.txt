@@ -1,0 +1,15 @@
+Subject: "learnings accumulate in docs"
+
+Hi Alexander,
+
+Your four-types-of-memory post says "The solution isn't cramming everything into CLAUDE.md, but building a layered context system where learnings accumulate in docs and specialized agents load on-demand." That is the shape of my own setup. The step I would add is the one that makes learnings accumulate: /crystallize, which turns a session that worked into a skill whose rules carry their why.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/0da05c4e/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

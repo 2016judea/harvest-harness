@@ -1,0 +1,15 @@
+Subject: "routes you to the right skill"
+
+Hi Hamel,
+
+Your Evals Skills post describes a skill that "looks at your situation and routes you to the right skill." Routing is the part most skill libraries skip. My harness pairs it with a rule on where skills come from: harvested from a session that worked, with every rule carrying its why.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/adf924a1/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

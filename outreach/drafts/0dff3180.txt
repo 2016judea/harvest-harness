@@ -1,0 +1,15 @@
+Subject: "a delegation skill"
+
+Hi Chris,
+
+In "(I Am No Longer) Coding With AI" you wrote "I use a delegation skill to send pieces of work to other agents in the background, so the main conversation stays available." My own harness has the same shape, an eng-lead agent the main session hands work to. What I would add is where the skills come from: harvested from a session that worked, never written up front.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/0dff3180/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

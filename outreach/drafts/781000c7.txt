@@ -1,0 +1,13 @@
+Subject: "Install nothing I have not agreed to"
+
+Hi Bruno,
+
+Your my-claude-skills README makes the install a prompt Claude runs, with the line "Install nothing I have not agreed to." That is the right instinct for anything that writes into ~/.claude. I packaged my own harness on the same promise: the free installer never overwrites a file you already have.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/781000c7/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

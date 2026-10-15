@@ -1,0 +1,13 @@
+Subject: "the same rigor they'd want from a human reviewer"
+
+Hi Foyzul,
+
+Your skills README is "For solo devs and small teams who want agent-driven development to ship with the same rigor they'd want from a human reviewer." Seventeen domain checks dispatched in parallel from /review is serious rigor. My harness covers the step after the review: once a session works, /crystallize writes what it learned into a skill, so the next run starts there.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/b21f9d53/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

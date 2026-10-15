@@ -1,0 +1,13 @@
+Subject: "the smallest independently verifiable vertical tasks"
+
+Hi Srdjan,
+
+Your to-plan skill "Splits an approved source into the smallest independently verifiable vertical tasks," and the chain from talk-it-through to create-pr runs 23 skills. That is a planning pipeline most teams never write down. My harness is the other end of that chain: once a session works, /crystallize writes what it learned into a skill, so the next run is one-shot.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/d6441291/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

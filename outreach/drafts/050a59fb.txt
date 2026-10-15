@@ -1,0 +1,13 @@
+Subject: "EXPAND → HOLD → REDUCE"
+
+Hi Kayleigh,
+
+Your claude-config has a CEO review skill that runs plans through "EXPAND → HOLD → REDUCE," next to an eng review. Keeping your live ~/.claude in the repo, scheduled tasks included, takes nerve. My harness has the same split as two agents: an eng-lead that builds, and a product-lead that only looks for one disqualifying fact.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/050a59fb/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

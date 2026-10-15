@@ -1,0 +1,13 @@
+Subject: "Every skill explicitly opts out of auto-loading"
+
+Hi Mohamed,
+
+Your claude-code-configuration README says "Every skill explicitly opts out of auto-loading." Thirteen manual-only skills is a strong stand against context bloat. I went the other way, with descriptions that carry the exact trigger phrases, so I am curious how manual-only has held up.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/90900110/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

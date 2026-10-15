@@ -1,0 +1,13 @@
+Subject: "could a stranger install this and have it work?"
+
+Hi Jason,
+
+Your claude-skills README asks "could a stranger install this and have it work?" A test that fails when a plugin cites a path outside its own payload answers it properly. I just went through that with my own harness: a build that ships by whitelist and fails on any personal path.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/cd0d88eb/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,15 @@
+Subject: "Claude knows how to build its own skills"
+
+Hi Simon,
+
+In the Starlette 1.0 post you wrote "This means Claude knows how to build its own skills." I have been running on that for months: at the end of a session that worked, one skill, crystallize, writes the skill from it. Every rule it writes carries its why and a dated grounded: line, so stale ones are easy to retire.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/b3513c21/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

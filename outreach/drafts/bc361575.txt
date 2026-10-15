@@ -1,0 +1,13 @@
+Subject: "read and not executed"
+
+Hi Todd,
+
+Your issue #95767 logs that "Prose rules in CLAUDE.md get read and not executed (19 incidents, 14 in the final week)." 248 logged failures is more rigor than most bug reports get. Your finding matches mine: only hooks enforce. The rest of my harness is about making prose rules worth reading, each one carrying its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/bc361575/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

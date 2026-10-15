@@ -1,0 +1,13 @@
+Subject: "checked, not trusted"
+
+Hi Eric,
+
+domestique's README: "the implementer's 'done, tests pass' is checked, not trusted." Pinning the implementer to Sonnet and the reviewer to Opus is a clean split. My harness applies the same distrust one level up: nothing becomes a skill until the session behind it has been checked in the world.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/cf283632/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

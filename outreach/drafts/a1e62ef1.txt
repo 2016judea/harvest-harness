@@ -1,0 +1,13 @@
+Subject: "its own reading of the instruction"
+
+Hi Phil,
+
+Your issue #101638 says "Claude weighs its own reading of the instruction over the user's plain request." Over-applying one rule while ignoring a TDD skill is the same failure in both directions. I don't have a fix for the bug. What has held up in my own harness: every rule carries its why, and anything that must never fail lives in a hook.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/a1e62ef1/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

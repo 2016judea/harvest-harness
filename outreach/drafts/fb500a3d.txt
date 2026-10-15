@@ -1,0 +1,13 @@
+Subject: "three confident, incorrect factual claims"
+
+Hi Emiliyan,
+
+Your issue #83607 records "three confident, incorrect factual claims — two about the codebase, one about the user" in one session, despite a never-guess rule. That rule is in my CLAUDE.md too. What has held up for me is attaching the why to each rule, so the model can apply it to the case the rule never named.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/fb500a3d/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

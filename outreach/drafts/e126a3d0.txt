@@ -1,0 +1,13 @@
+Subject: "Keep all four in parity"
+
+Hi Adam,
+
+Your ai-config CLAUDE.md says "Keep all four in parity when changing shared behaviour, even where one is not in active daily use." One config across Claude Code, OpenCode, Pi and Codex, installed with Stow, is a lot of discipline. My harness takes on a smaller version of that drift: every skill carries a grounded: date and the session it came from, so a stale one is easy to spot.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/e126a3d0/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "ask rather than continuing to guess"
+
+Hi Ben,
+
+Your dotfiles CLAUDE.md has "If blocked after 2-3 attempts on the same problem, explain the situation and ask rather than continuing to guess." Chaining the benswift-writer voice skill into a jamesian prose skill is a nice piece of composition. Composition is the core of my harness too: one skill per tool, task skills point at them, and every rule says why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/7f982209/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

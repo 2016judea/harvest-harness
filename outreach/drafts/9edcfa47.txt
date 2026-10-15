@@ -1,0 +1,13 @@
+Subject: "Stop re-explaining your standards every session"
+
+Hi Cristhian,
+
+Your claude-skills-czl README opens on "Stop re-explaining your standards every session." And the skills keep a learnings/ folder, which is most of the way to a loop. My harness closes that loop with one skill, crystallize: at the end of a session that worked, it writes what was learned into a skill whose rules carry their why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/9edcfa47/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

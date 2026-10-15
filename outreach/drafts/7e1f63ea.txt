@@ -1,0 +1,13 @@
+Subject: "fix: skill issue"
+
+Hi Paul,
+
+Your skill-issue repo holds "Personal user-level agent skills, rules, and settings. Available across all projects." About 37 skills, installed additively with a manifest so nothing gets clobbered. My free installer makes the same promise, and the method behind it is about where skills come from: sessions that worked.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/7e1f63ea/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

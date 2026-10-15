@@ -1,0 +1,13 @@
+Subject: "walls that refuse commands you would have regretted"
+
+Hi Chris,
+
+bionic's README describes "a small set of walls that refuse commands you would have regretted." Seventeen hook files in a personal bootstrap says you have been bitten a few times. My harness has three hooks built the same way, each one written after something actually went wrong, with the why in the file.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/cd3c7190/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

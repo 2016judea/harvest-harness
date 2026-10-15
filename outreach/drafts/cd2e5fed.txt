@@ -1,0 +1,13 @@
+Subject: "building repeatable processes"
+
+Hi Alex,
+
+Your issue #87874 says "Skills and CLAUDE.md workflows are the mechanism Claude Code gives us for building repeatable processes." When the orchestration underneath shifts, those processes break quietly. My harness copes with that drift by dating every skill with a grounded: line, so it is obvious which ones predate a release.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/cd2e5fed/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

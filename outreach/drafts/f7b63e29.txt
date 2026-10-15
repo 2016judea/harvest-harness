@@ -1,0 +1,13 @@
+Subject: "what you build on top of it"
+
+Hi Indranil,
+
+Your claude-local-starter README says "Claude Code's real power isn't the model — it's what you build on top of it." Lifting a whole ~/.claude to a new machine with one install.sh treats it that way. I agree, and what I would add is how you build it: skills harvested from sessions that worked, each rule carrying its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/f7b63e29/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

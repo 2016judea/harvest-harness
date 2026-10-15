@@ -1,0 +1,13 @@
+Subject: "whichever project's memory"
+
+Hi Bartłomiej,
+
+Your issue #83831 says "Today that knowledge only exists in whichever project's memory the session happened to save it to." I hit the same thing with runbooks stranded in one repo. My workaround is a habit: when a session works, the lesson becomes a global skill in ~/.claude/skills, not a project memory, dated with the session it came from.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/baf71ee3/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

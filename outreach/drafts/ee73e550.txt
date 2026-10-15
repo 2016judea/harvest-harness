@@ -1,0 +1,15 @@
+Subject: "The Harness Is the Company"
+
+Hi Shrivu,
+
+"The Harness Is the Company" defines the harness as "all the infra, interfaces, context, and state that surround a stateless LLM." By that definition most engineers' harness is whatever they wrote into ~/.claude last month and never revisited. Mine grows on the opposite habit: a skill is written only after a session worked, and every rule in it carries its why.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/ee73e550/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

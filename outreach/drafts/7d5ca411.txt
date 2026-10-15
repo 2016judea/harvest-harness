@@ -1,0 +1,13 @@
+Subject: "remember prior state, decisions, and design"
+
+Hi Marck,
+
+Your issue #73575 says "Claude needs a reliable way to 'remember' prior state, decisions, and design." Reinventing solved work is the most expensive kind of forgetting. My harness answers it with a habit rather than a feature: when a session solves something, /crystallize turns it into a skill, so the next session starts from the answer.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/7d5ca411/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "A portable Claude Code setup in one Git repository"
+
+Hi Hermann,
+
+Your claude-code-config README: "A portable Claude Code setup in one Git repository: subagents, skills, hooks, a status line and a few command-line tools." A hook that rotates MCP API keys on quota exhaustion is one I had not seen. I run Claude Code on one bet: a skill only gets written after a session worked, and every rule in it carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/b6556fe9/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

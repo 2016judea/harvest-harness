@@ -1,0 +1,13 @@
+Subject: "i enjoy optimizing my agent workflows"
+
+Hi Tom,
+
+Your harness-configs README ends "please feel free to add suggestions!! i enjoy optimizing my agent workflows." Auto-worktree for anything non-trivial is a good default. One suggestion from my own setup: write skills only after a session worked, and give every rule its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/9a014ec7/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

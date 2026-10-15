@@ -1,0 +1,13 @@
+Subject: "The spec is permanent and edited in place"
+
+Hi Mason,
+
+Your BPE plugin says "The spec is permanent and edited in place; it carries the project's invariants, its non-goals, and the work deferred for later." And /bpe:goal refusing to run on main is a rule I would steal. My harness treats skills the way you treat the spec: one per job, edited in place, every rule with its reason attached.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/ca67f9b1/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

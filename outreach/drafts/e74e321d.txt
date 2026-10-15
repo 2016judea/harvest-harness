@@ -1,0 +1,15 @@
+Subject: "Audit your Agent files"
+
+Hi Addy,
+
+In "Audit your Agent files" you wrote "keeping your skills and CLAUDE.md/AGENTS.md files up to date is a big pain point." I hit the same wall and ended up deleting 31 stale skills in one pass. Since then every skill carries a grounded: line, the date and the session it came from, and a skill retires the day the work behind it does.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/e74e321d/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

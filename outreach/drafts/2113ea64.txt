@@ -1,0 +1,15 @@
+Subject: "you own the harness"
+
+Hi Diego,
+
+Your Harness Engineering post says "you are renting an LLM model as a service, but you own the harness." I agree, and the harness is the part almost nobody versions with care. Mine grows one way only: a skill is written after a session worked, and every rule in it carries its why.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/2113ea64/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

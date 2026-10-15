@@ -1,0 +1,13 @@
+Subject: "doesn't connect them"
+
+Hi Swapnanil,
+
+Your issue #78795 says "Claude Code ships both halves of a triggered memory system and doesn't connect them." The skill description is the closest thing to a trigger we have today. My harness leans on that: every skill description carries the exact phrases that should fire it, and its rules carry their why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/4d7fc606/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "do not do this yourself"
+
+Hi Scott,
+
+Your issue #91549 says "If the most expensive model cannot follow a persistent instruction that says 'do not do this yourself,' the price is not justified." Delegation rules are the ones I have seen slip most. In my harness the delegation lives in an agent definition, eng-lead, rather than a line of prose, and every rule around it carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/f2e42c93/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

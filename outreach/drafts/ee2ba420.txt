@@ -1,0 +1,15 @@
+Subject: "Claude Code reads CLAUDE.md and skips AGENTS.md"
+
+Hi Chudi,
+
+Your AGENTS.md post says "If both files exist, Claude Code reads CLAUDE.md and skips AGENTS.md, while Codex reads AGENTS.md." That is the kind of detail that costs people a day. My harness is built around that one file: a CLAUDE.md of tenets, each with its why, plus skills harvested from sessions that worked.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/ee2ba420/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

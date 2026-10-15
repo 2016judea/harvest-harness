@@ -1,0 +1,13 @@
+Subject: "17 canonical English-prose rules"
+
+Hi Wenhao,
+
+Your writing plugin says "17 canonical English-prose rules apply everywhere," with preflight.py running six deterministic checks before submission. Scripts doing the checks the model should not be trusted with is the right split. I run Claude Code on one bet: a skill only gets written after a session worked, and every rule in it carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/71f64589/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

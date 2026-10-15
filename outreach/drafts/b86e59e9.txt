@@ -1,0 +1,15 @@
+Subject: "Tell agents the why"
+
+Hi Sean,
+
+Your post says to "give the agent context on your priorities, not just on the specific task you want them to do." I built my whole Claude Code harness on that. Every rule in every skill carries its why, because a rule without one gets rationalized around the first time it is inconvenient.
+
+If it's useful to your readers, the free half is MIT: share it, fork it, take it apart in a post.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/b86e59e9/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

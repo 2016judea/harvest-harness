@@ -1,0 +1,13 @@
+Subject: "built solely for my own workflow"
+
+Hi Alberto,
+
+Your claude-marketplace README says "It is built solely for my own workflow, and I am the only intended and supported user." Sixty skills synced into Codex manifests by script is a big personal setup. Mine started the same way, built for one person. The method that produced it is what I ended up packaging.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/112701c2/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "agents ... that I use regularly"
+
+Hi Derrick,
+
+Your claude-dotfiles README describes "specialized Claude agents and prompt configurations that I use regularly for various development tasks." The AI-Writing-Guidelines.md next to the ten agents is the file most setups are missing. I run Claude Code on one bet: a skill only gets written after a session worked, and every rule in it carries its why.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/2908b625/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

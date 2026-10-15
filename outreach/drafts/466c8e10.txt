@@ -1,0 +1,13 @@
+Subject: "50% externalised temper tantrum"
+
+Hi Jason,
+
+goblin-mode's README calls it "50% useful tool/teaching resource for agentic coding, 50% externalised temper tantrum." Every skill tracing back to a specific friction point is the honest way to build these. It is the method my harness is built on too: a skill is written only after a session worked, never up front, and each rule says why it exists.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/466c8e10/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

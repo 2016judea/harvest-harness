@@ -1,0 +1,13 @@
+Subject: "a point of view rather than generic polish"
+
+Hi Adam,
+
+Your frontend-design-director skill says "the page needs a point of view rather than generic polish." Shipping 21 skills to both Claude Code and Codex out of a design studio is rare. I hold my own skills to that standard: each rule carries its why, so the agent can apply it to a case the rule never anticipated.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/86499c50/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

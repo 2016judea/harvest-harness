@@ -1,0 +1,13 @@
+Subject: "declaring victory early"
+
+Hi Ben,
+
+Your claude-code-workflow README says "Most agent frustration comes from the model declaring victory early." Handing /assess to a fresh agent that did not write the code is the right fix. My harness runs on a related idea: nothing becomes a skill until the session has been checked in the world, so the skill encodes what actually worked.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/c55a532f/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

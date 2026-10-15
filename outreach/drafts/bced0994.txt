@@ -1,0 +1,13 @@
+Subject: "its own MUST-rules"
+
+Hi Philipp,
+
+Your issue #70420 says "the agent violates even its own MUST-rules within the same session that authored them." And PreToolUse hooks as the stopgap is where I landed too. The rest of my harness is about the prose rules: each one carries its why, because a bare MUST is the first thing to get rationalized around.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/bced0994/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

@@ -1,0 +1,13 @@
+Subject: "what auto-memory actually loaded"
+
+Hi Shawna,
+
+Your issue #82056 asks Claude Code to "Expose, in-session, what auto-memory actually loaded." My own MEMORY.md is past the 200-line limit right now, so I know the feeling. What helped me: the rules that matter live in CLAUDE.md and skills, each with its why, and memory holds only facts.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/67dc204f/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com

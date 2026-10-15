@@ -1,0 +1,13 @@
+Subject: "tool calls that clearly waste a lot of context"
+
+Hi Volodymyr,
+
+Your claudefiles guard hook "blocks the few tool calls that clearly waste a lot of context or answer the wrong question." The burn-rate pace badge on the statusline is a great idea. My hooks came from the same place: each one written after a real failure, with the reason in the file.
+
+The method and four skills are free, one command: https://harvest-harness.vercel.app/for/809e86c9/
+The whole bench is $49, once.
+
+Best,
+Aidan
+MS, Artificial Intelligence and Machine Learning, Columbia University
+https://randomaidan.substack.com
