@@ -11,8 +11,11 @@ export default async function handler(req, res) {
   });
   if (!r.ok) return res.status(404).send("No such purchase.");
   const s = await r.json();
+  // Fail closed: with PAYMENT_LINK_ID unset, `link && …` skipped the link check and ANY
+  // paid session on the account (a $5 list, a $1 gift) would have unlocked the $49 zip.
   const link = process.env.PAYMENT_LINK_ID;
-  if (s.payment_status !== "paid" || (link && s.payment_link !== link)) {
+  if (!link) return res.status(500).send("Downloads are not configured.");
+  if (s.payment_status !== "paid" || s.payment_link !== link) {
     return res.status(402).send("This purchase is not paid yet.");
   }
   const buf = Buffer.from(ZIP_B64, "base64");
