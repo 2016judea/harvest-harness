@@ -1,6 +1,6 @@
 {
   "buildCommand": "echo build",
-  "outputDirectory": ".",
+  "outputDirectory": "public",
   "rewrites": [{ "source": "/for/:token", "destination": "/index.html" }, { "source": "/for/:token/", "destination": "/index.html" }],
   "redirects": [{ "source": "/api/_bundle(.*)", "destination": "/", "permanent": false }],
   "headers": [{ "source": "/install.sh", "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }] }]
